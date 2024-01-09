@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP address Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" ></script>
+</head>
+<body>
+    <header class="flex">
+        <p>IP Address Tracker</p>
+        <form action="#" class="flex">
+            <label for="error" ></label>
+            <input type="text" placeholder="Search for any IP address or domain" >
+             <button type="submit" >
+                <img src="/img/icon-arrow.svg" alt="arrow-icon">
+             </button>
+        </form>
+    </header>
+    <div class="info_card flex">
+        <div class="ip_info">
+            <p class="ip_info_name white-hl">IP ADDRESS</p>
+            <p class="ip_info_number bold-txt"></p>
+        </div>
+        <div class="loc_info">
+            <p class="loc_info_name white-hl">LOCATION</p>
+            <p class="loc_info_number bold-txt"></p>
+        </div>
+        <div class="tz_info">
+            <p class="tz_info_name white-hl">TIMEZONE</p>
+            <p class="tz_info_number bold-txt"><span></span></p>
+        </div>
+        <div class="isp_info">
+            <p class="isp_info_name white-hl">ISP</p>
+            <p class="isp_info_number bold-txt"></p>
+        </div>
+    </div>
+        <div id ="map"></div>
+    <script src="script.js"></script>
+</body>
+</html>
