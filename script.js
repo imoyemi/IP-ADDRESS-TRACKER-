@@ -12,24 +12,24 @@ const marker = L.marker([0, 0]).addTo(map)
 
 
     
-    // function curSuccess(pos){
-    //    const lag = pos.coords.latitude;
-    //    const lng = pos.coords.longitude;
+    function curSuccess(pos){
+       const lag = pos.coords.latitude;
+       const lng = pos.coords.longitude;
 
-    //    marker.setLatLng([lag,lng]).update();
-    //    map.setView([lag,lng],13)
+       marker.setLatLng([lag,lng]).update();
+       map.setView([lag,lng],13)
     //    marker.bindPopup('current location')
     //    .openPopup();
-    // }
-    // function curError(err){
-    //     console.log(err)
-    // }
-    // const options = {}
+    }
+    function curError(err){
+        console.log(err)
+    }
+    const options = {}
 
-    // navigator.geolocation.getCurrentPosition(curSuccess,curError,options)
+    navigator.geolocation.getCurrentPosition(curSuccess,curError,options)
 
     async function getLoction (){
-        const res = await fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_LGCG9SaoxVUKLoIZ03Cb8BLwrAiJq&ipAddress=${inputValue.value}`)
+        const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_Rws50uKSEQQY5YtpI1qfzIkzr33af&ipAddress=${inputValue.value}`)
         const data = await res.json()
         try {  
             if(!navigator.onLine){
